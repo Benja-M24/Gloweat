@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% block lista %}
+    
+        <table border="3">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Email</th>
+                    <th>Passw</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuar in usuarios %}
+                <tr>
+                    <td>{{ usuar.id_cliente }}</td>
+                    <td>{{ usuar.nombre }}</td>
+                    <td>{{ usuar.apellidos }}</td>
+                    <td>{{ usuar.edad }}</td>
+                    <td>{{ usuar.email }}</td>
+                    <td>{{ usuar.passw }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+{% endblock lista %}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+        <title>Page Title</title>
+</head>
+<body style="background: black; color: #FFFFFF">
+    <title>Gloweat</title>
+    <center><h1 style="font-size: 130px; text-align: center; font-family: Arial, Helvetica, sans-serif">Gloweat</h1></center>
+    <h3>Amamos la comida rápida tanto como vos y por eso queremos llevarla a tu mesa, y lo mejor es que ¡TE LA LLEVAMOS DONDE ESTES!</h3>
+    <br>
+    <br>
+    <center>
+            <table>
+                <tr>
+                    <th>Delivery de comida online que satisface tus sentidos
+                        Pedí online rápido y fácil</th>
+                </tr>
+                <tr>
+                    <th><h3>Nuestra comunidad</h3></th>
+                </tr>
+                <tr>
+                    <th>Descubrí millones de experiencias y opiniones de usuarios
+                        Ingresa tus datos, danos tu dirección, selecciona la comida y listo!
+                     Pedir delivery nunca fue tan fácil, con Gloweat lo único difícil es decidir qué comer!!</th>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>
+                        <h3><a href="#Nuevo"><b>REGISTRESE</b></a></h3>
+                    </th>
+                    <th>
+                        <h3><a href="#Ingresar"><b>INICIE SESION</b></a></h3>
+                    </th>
+                </tr>
+            </table>
+        </center>
+    <div id="Nuevo" class="modalDialog">
+        <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2 align="center">Ingrese Sus Datos</h2>
+            <!--<form action="NuevoUs.php" method="POST">
+                <center><b>Nombre</b></center>
+                <center><input type="text" name="Nombre"></center>
+                <br>
+                <center><b>Apellido</b></center>
+                <center><input type="text" name="Apellido"></center>
+                <br>
+                <center><b>E-Mail</b></center>
+                <center><input type="email" name="correo"></center>
+                <br>
+                <center><b>Contraseña</b></center>
+                <center><input type="password" name="contra1" id="pas1"></center>
+                <br>
+                <center><b>Confirmar Contraseña</b></center>
+                <center><input type="password" name="contra2" id="pas2"></center>
+                <br>
+                <center><b>Telefono</b></center>
+                <center><input type="text" name="fono"></center>
+                <center>
+                    <table>
+                    <th><input type="submit" name="enviar" value="Crear Usuario"></th>
+                </table></center>
+                <left></left>
+            </form>
+            -->
+            {% block registrar %}
+
+            {% endblock registrar %}
+        </div>
+    </div>
+    <div id="Ingresar" class="modalDialog">
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <h2 align="center">Ingrese Sus Datos</h2>
+                <form action="ValidarUS.php" method="POST">
+                    <center><b>E-Mail</b></center>
+                    <center><input type="email" name="correo1"></center>
+                    <br>
+                    <center><b>Contraseña</b></center>
+                    <center><input type="password" name="contra"></center>
+                    <br>
+                        <table>
+                        <th><input type="submit" name="enviar" value="Iniciar Session"></th>
+                    </table></center>
+                    <left></left>
+                </form>
+            </div>
+        </div>
+        <script>
+        
+        
+        </script>
+    <style>
+            .modalDialog {
+                    position: fixed;
+                    font-family: Arial, Helvetica, sans-serif;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: rgba(0,0,0,0.8);
+                    z-index: 99999;
+                    opacity:0;
+                    -webkit-transition: opacity 400ms ease-in;
+                    -moz-transition: opacity 400ms ease-in;
+                    transition: opacity 400ms ease-in;
+                    pointer-events: none;
+                }
+                .modalDialog:target {
+                    opacity:1;
+                    pointer-events: auto;
+                }
+        
+                .modalDialog > div {
+                    width: 400px;
+                    position: relative;
+                    margin: 10% auto;
+                    padding: 5px 20px 13px 20px;
+                    border-radius: 10px;
+                    background: rgba(0,0,0,0.8);
+                    background: -moz-linear-gradient(rgba(0,0,0,0.8), #999);
+                    background: -webkit-linear-gradient(rgba(0,0,0,0.8), #999);
+                    background: -o-linear-gradient(#fff, #999);
+                }
+                .close {
+                    background: #606061;
+                    color: #FFFFFF;
+                    line-height: 25px;
+                    position: absolute;
+                    right: -12px;
+                    text-align: center;
+                    top: -10px;
+                    width: 24px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    -webkit-border-radius: 12px;
+                    -moz-border-radius: 12px;
+                    border-radius: 12px;
+                    -moz-box-shadow: 1px 1px 3px #000;
+                    -webkit-box-shadow: 1px 1px 3px #000;
+                    box-shadow: 1px 1px 3px #000;
+                }
+        
+                .close:hover { background: #00d9ff; }
+                
+            body {
+                width: 99%;
+            }    
+            table {
+                text-align: center;
+                width: 1000px;
+                height: 40px;
+            }
+
+            a {
+                background: #b5cd60;
+                border: 0;
+                width: 150px;
+                height: 40px;
+                border-radius: 3px;
+                color: white;
+                cursor: pointer;
+                transition: background 0.3s ease-in-out;
+            }
+            a:hover {
+                background: #16aa56;
+            }
+        </style>
+</body>
+</html>

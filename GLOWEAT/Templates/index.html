@@ -1,0 +1,196 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gloweat</title>
+	<meta charset="utf-8">
+
+	<link rel="icon" type="img/png" href="{% static 'imagenes\logo.ico' %}">
+	
+</head>
+<link rel="stylesheet" type="text/css" href="{% static 'css\fontello.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css\estilos.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css\menu.css' %}">
+
+
+
+
+<style>
+body{
+	background-size: 100%;
+	
+}
+
+.modalDialog {
+			position: fixed;
+			font-family: Arial, Helvetica, sans-serif;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: rgba(0,0,0,0.8);
+			z-index: 99999;
+			opacity:0;
+			-webkit-transition: opacity 400ms ease-in;
+			-moz-transition: opacity 400ms ease-in;
+			transition: opacity 400ms ease-in;
+			pointer-events: none;
+		}
+		.modalDialog:target {
+			opacity:1;
+			pointer-events: auto;
+		}
+
+		.modalDialog > div {
+			width: 400px;
+			position: relative;
+			margin: 10% auto;
+			padding: 5px 20px 13px 20px;
+			border-radius: 10px;
+			background: #ff0000;
+			background: -moz-linear-gradient(#ff0000, #999);
+			background: -webkit-linear-gradient(#ff0000, #999);
+			background: -o-linear-gradient(#ff0000, #999);
+		}
+		.close {
+			background: #606061;
+			color: #FFFFFF;
+			line-height: 25px;
+			position: absolute;
+			right: -12px;
+			text-align: center;
+			top: -10px;
+			width: 24px;
+			text-decoration: none;
+			font-weight: bold;
+			-webkit-border-radius: 12px;
+			-moz-border-radius: 12px;
+			border-radius: 12px;
+			-moz-box-shadow: 1px 1px 3px #000;
+			-webkit-box-shadow: 1px 1px 3px #000;
+			box-shadow: 1px 1px 3px #000;
+		}
+
+		.close:hover { background: #00d9ff; }
+
+  input[type="text"], input[type="password"] {
+    width: 250px;
+    padding: 10px 0px;
+    border: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: #46485c;
+    font-size: 12px;
+  }
+
+  input[type="submit"] {
+	background: white;    
+	border: 10px;
+    width: 150px;
+    height: 40px;
+    border-radius: 3px;
+    color: black;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  input[type="submit"]:hover {
+    background: #b5cd60;
+    color: black;
+  }
+</style>
+
+<body>
+
+	<header>
+
+		
+
+		<div class="contenedor">
+			<h1 class="icon-soccer-ball"><font color="white"><font color="White"> Gloweat </h1>
+
+			<input type="checkbox" id="menu-bar">
+			<label  class="icon-menu" for="menu-bar"></label>
+			<nav class="menu">
+				<img src="{% static 'Fotos/Personita.png' %}" alt="Perfil Foto" style="width: 200px"><br>
+				<a>Nombre y Apellido</a>
+				<a href="Categories.php">Categoria</a>
+				<a href="River Plate.html">Historial de Carritos</a>
+				<a href="Boca Juniors.html">Carrito Actual</a>
+			</nav>
+		</div>
+	</header>
+	<main>		
+
+				<br><br><br><br>
+				
+				<center><h1 style="color: black;" >¿Que queres comer?</h1></center>
+    <br>
+    <br>
+    <center>
+        <table>
+			{% block lista %}
+				<tr>
+                	<td><img src="{% static 'Fotos/Hamurguesa1.png' %}" style="width:200px;height:200px;"></td>
+                	<td>Combo hamburguesa doble x2, tomate, lechuga, bacon, chedar y aros de cebolla</td>
+                	<td>$300</td>
+                	<td><input type="submit" name="1" value="Agregar"></td>	
+            	</tr>
+			{% endblock lista %}
+		</table>
+		
+    </center> 
+    
+				<script type="text/javascript">
+
+				function verificar()
+				{
+				var comentario, usuario, votos;
+
+				vts = document.forms["msj"]["rb"].value;
+				com = document.getElementById("coment").value;
+				us = document.getElementById("usuario").value;
+				
+				if (us == "" || com == ""|| vts == "")
+					{
+						alert("Revise los campos")
+						return false;
+					}
+
+				}
+
+				</script>
+
+				</form>
+
+					</div>
+			</div>
+
+			</div>
+		</section>
+
+
+
+	</main>
+
+</body>
+<style>
+	table {
+	  text-align: center;
+	  font-family: arial, sans-serif;
+	  border-collapse: collapse;
+	  width: 90%;
+	  color: black;
+	}
+	
+	td, th {
+	  border: 1px solid #dddddd;
+	  text-align: center;
+	  padding: 10px;
+	}
+	
+	tr:nth-child(even) {
+	  background-color: #dddddd;
+	}
+	</style>
+
+</html>
+
