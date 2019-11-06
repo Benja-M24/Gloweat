@@ -1,8 +1,0 @@
-{% extends 'inicio.html' %}
-{% block registrar %}
-    <form method="POST">
-        {% csrf_token %}
-            {{ Usuario_Form.as_p }}
-            <button type="submit">Crear</button>
-    </form>
-{% endblock registrar %}
