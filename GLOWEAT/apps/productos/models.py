@@ -5,8 +5,13 @@ class categorias(models.Model):
     id_categoria = models.AutoField(primary_key=True)
     nombre = models.CharField('Nombre de la categoria',max_length=100, blank=False, null=False) 
     #estado = models.BooleanField('Categoria Activada/Categoria no Activada', default=True)
+
+    class Meta:
+        verbose_name = 'Categoria'
+        verbose_name_plural = 'Categorias'  
+
     def __str__(self):
-        return self.nombre 
+        return self.nombre  
 
 class productos(models.Model):
     id_producto = models.AutoField(primary_key=True)
@@ -17,5 +22,9 @@ class productos(models.Model):
     #fecha = models.DateField(auto_now=False, auto_now_add=False, blank=False, null=False, default=date.today)
     id_cate = models.ForeignKey(categorias, on_delete = models.CASCADE)
 
+    class Meta:
+        verbose_name = 'Producto'
+        verbose_name_plural = 'Productos'
+
     def __str__(self):
-        return self.nombre 
+        return self.nombre
