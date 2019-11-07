@@ -1,0 +1,31 @@
+<mat-sidenav-container
+    class="example-container" (backdropClick)="close('backdrop')" *ngIf="shouldRun">
+
+    <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+    <ul>
+        <li><br></li>
+        <li><br></li>
+        <li><br></li>
+        <li>Nombre</li>
+    </ul>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <h2><button mat-button (click)="sidenav.open()">Open</button></h2>
+    <h1>Bienvenidos a Gloweat</h1>
+    <table>
+        <tr>
+            <th><app-inicio></app-inicio></th>
+            <th><app-inicio></app-inicio></th>
+            <th><app-inicio></app-inicio></th>
+        </tr>
+        <tr>
+            <th><app-inicio></app-inicio></th>
+            <th><app-inicio></app-inicio></th>
+            <th><app-inicio></app-inicio></th>
+        </tr>
+    </table>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
