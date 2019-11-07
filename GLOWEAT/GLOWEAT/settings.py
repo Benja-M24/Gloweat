@@ -25,7 +25,9 @@ SECRET_KEY = 'u(w47un4ckxsr+mzp24ry9m2k!ouodk%v6zvrxr9icjmoeql15'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '192.168.1.23',
+]
 
 
 # Application definition
@@ -41,14 +43,19 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders'
 ]
-
 REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
+#original
+""" REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
-}
+} """
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

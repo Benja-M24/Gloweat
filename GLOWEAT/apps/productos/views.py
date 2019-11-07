@@ -1,8 +1,14 @@
 from rest_framework import viewsets
-from apps.  productos.models import productos
-from apps.productos.serializers import ProductoSerializer
+from apps.productos.models import productos, Pedido
+from apps.productos.serializers import ProductoSerializer, PedidoSerializer
+
 
 class ProductoViewSet(viewsets.ReadOnlyModelViewSet):
     model = productos
     queryset = productos.objects.all()
     serializer_class = ProductoSerializer
+
+class PedidoViewSet(viewsets.ModelViewSet):
+    model = Pedido
+    queryset = Pedido.objects.all()
+    serializer_class = PedidoSerializer
