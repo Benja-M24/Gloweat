@@ -2,16 +2,20 @@
     class="example-container" (backdropClick)="close('backdrop')" *ngIf="shouldRun">
 
     <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+            <div class="example-perfil-image"><img mat-card-image src="https://lgfstatic.com/2015/conversions/virtudes-de-una-persona-large.jpg" alt="Perfil"></div>
+        <br>
+        <br>
+        <br>
     <ul>
-        <li><br></li>
-        <li><br></li>
-        <li><br></li>
         <li>Nombre</li>
+        <li><a href="/login">Productos</a></li>
+        <li>Carrito</li>
+        <li> Historial de Carrito</li>
     </ul>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <h2><button mat-button (click)="sidenav.open()">Open</button></h2>
+    <h2><button mat-button (click)="sidenav.open()"><i class="fas fa-bars"></i></button></h2>
     <h1>Bienvenidos a Gloweat</h1>
     <table>
         <tr>

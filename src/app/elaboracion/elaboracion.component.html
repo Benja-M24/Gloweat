@@ -1,0 +1,31 @@
+<h1>Estado de Pedidos</h1>
+<table>
+        <tr>
+            <th>Nr Pedido</th>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+            <th>Enviar</th>
+            <th>Borrar</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Combo 1</td>
+            <td><input type="date"></td>
+            <td>
+                <select name="Estado">
+                    <option value="Sin_empezar">Sin empezar</option>
+                    <option value="En_proceso">En proceso</option>
+                    <option value="Termiado">Terminado</option>
+                </select>
+            </td>
+            <td>
+                <mat-card-actions>
+                        <button mat-button>Enviar</button>
+                </mat-card-actions>
+            </td>
+            <td>
+                <button><i class="fas fa-trash-alt"></i></button>
+            </td>
+        </tr>
+</table>
