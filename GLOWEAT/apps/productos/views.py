@@ -12,3 +12,13 @@ class PedidoViewSet(viewsets.ModelViewSet):
     model = Pedido
     queryset = Pedido.objects.all()
     serializer_class = PedidoSerializer
+
+# class ConsultaViewSet(viewsets.ModelViewSet):
+#     model = Pedido
+#     queryset = Pedido.objects.all()
+#     serializer_class = ConsultaSerializer
+
+class ConsultaProductosEstado(viewsets.ModelViewSet):
+    serializer_class = ProductoSerializer
+    queryset = productos.objects.all()
+    
