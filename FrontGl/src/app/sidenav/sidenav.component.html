@@ -8,7 +8,7 @@
         <br>
     <ul>
         <li>Nombre</li>
-        <li><a href="/login">Productos</a></li>
+        <!-- <li><a href="/login">Productos</a></li> -->
         <li>Carrito</li>
         <li> Historial de Carrito</li>
     </ul>
@@ -17,7 +17,12 @@
   <mat-sidenav-content>
     <h2><button mat-button (click)="sidenav.open()"><i class="fas fa-bars"></i></button></h2>
     <h1>Bienvenidos a Gloweat</h1>
-    <table>
+    <div class="product-list">
+      <div class="item" *ngFor="let item of prductos">
+        <app-inicio></app-inicio>
+      </div>
+    </div>
+    <!-- <table>
         <tr>
             <th><app-inicio></app-inicio></th>
             <th><app-inicio></app-inicio></th>
@@ -28,7 +33,7 @@
             <th><app-inicio></app-inicio></th>
             <th><app-inicio></app-inicio></th>
         </tr>
-    </table>
+    </table> -->
   </mat-sidenav-content>
 </mat-sidenav-container>
 

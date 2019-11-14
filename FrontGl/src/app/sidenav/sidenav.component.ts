@@ -10,6 +10,8 @@ export class SidenavComponent implements OnInit {
 
   @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
 
+  prductos = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
   reason = '';
 
   close(reason: string) {

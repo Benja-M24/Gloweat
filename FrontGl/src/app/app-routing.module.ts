@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path: '', component: SidenavComponent},
-  {path: '/login', component: LoginComponent}
+  // {path: '/login', component: LoginComponent}
 ];
 
 @NgModule({

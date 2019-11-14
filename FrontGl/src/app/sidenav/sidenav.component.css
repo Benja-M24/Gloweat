@@ -55,3 +55,15 @@ li:hover{
   background-color: gray;
   color: white;
 }
+
+.product-list {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  margin: 1rem;
+}
