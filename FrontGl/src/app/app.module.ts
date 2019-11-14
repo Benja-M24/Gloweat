@@ -2,7 +2,7 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
-import { InicioComponent } from './inicio/inicio.component';
+import { ProductItemComponent } from './inicio/product-item.component';
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { LoginComponent } from './login/login.component';
@@ -20,15 +20,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
-
-import {RouterModule, Routes} from '@angular/router';
 import { ProductosComponent } from './productos/productos.component';
 import { ElaboracionComponent } from './elaboracion/elaboracion.component';
+import { AuthServhice } from './services/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InicioComponent,
+    ProductItemComponent,
     SidenavComponent,
     LoginComponent,
     ProductosComponent,
@@ -46,9 +45,9 @@ import { ElaboracionComponent } from './elaboracion/elaboracion.component';
     MatToolbarModule,
     MatInputModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
   ],
-  providers: [],
+  providers: [AuthServhice],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
