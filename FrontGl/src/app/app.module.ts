@@ -25,11 +25,6 @@ import {RouterModule, Routes} from '@angular/router';
 import { ProductosComponent } from './productos/productos.component';
 import { ElaboracionComponent } from './elaboracion/elaboracion.component';
 
-const routes: Routes = [
-  // {path: '', component: SidenavComponent},
-  // {path: '/login', component: LoginComponent}
-];
-
 @NgModule({
   declarations: [
     AppComponent,
