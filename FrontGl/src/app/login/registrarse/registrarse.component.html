@@ -1,0 +1,48 @@
+<form class="example-form">
+    <h1>Registrarse</h1>
+  
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="Nombre">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="Apellido">
+      </mat-form-field></td>
+    </tr></table>
+  
+    <p>
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Dirección"></textarea>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="E-mail"></textarea>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width">
+        <input matInput type="password" placeholder="Contraseña">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+          <input matInput type="password" placeholder="Repita su contraseña">
+        </mat-form-field>
+    </p>
+    <p *ngIf="showErrorMessage" class="error-message">
+      Capo te batimamaste
+    </p>
+    <table>
+      <tr>
+        <th>
+          <div class="example-button-row">
+            <button type="button" mat-raised-button color="warn">Borrar Datos</button>
+          </div>
+        </th>
+        <th>
+          <div class="example-button-row">
+            <button type="button"  mat-raised-button color="primary" (click)="registrarse()">Registrarse</button>
+          </div>
+        </th>
+      </tr>
+    </table>
+  </form>

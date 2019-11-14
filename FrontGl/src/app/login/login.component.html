@@ -32,59 +32,14 @@
             <table>
                 <tr>
                     <th>
-                        <a href="#Registrarse">Registrarse</a>
+                        <button type="button" mat-raised-button color="primary" (click)="openRegisterDialog()">Registrarse</button>
                     </th>
                     <th>
-                        <a href="#InSe">Iniciar Sesión</a>
+                        <button type="button" mat-raised-button color="primary" (click)="openLoginDialog()">Iniciar Sesión</button>
                     </th>
                 </tr>
             </table>
             
-            <div id="Registrarse" class="modalDialog">
-                <div>
-                    <a href="#close" title="Close" class="close">X</a>
-                    <form class="example-form">
-                            <mat-form-field class="example-full-width">
-                              <input matInput placeholder="Company (disabled)" disabled value="Registrarse">
-                            </mat-form-field>
-                          
-                            <table class="example-full-width" cellspacing="0"><tr>
-                              <td><mat-form-field class="example-full-width">
-                                <input matInput placeholder="Nombre">
-                              </mat-form-field></td>
-                              <td><mat-form-field class="example-full-width">
-                                <input matInput placeholder="Apellido">
-                              </mat-form-field></td>
-                            </tr></table>
-                          
-                            <p>
-                              <mat-form-field class="example-full-width">
-                                <textarea matInput placeholder="Dirección"></textarea>
-                              </mat-form-field>
-                              <mat-form-field class="example-full-width">
-                                <textarea matInput placeholder="E-mail"></textarea>
-                              </mat-form-field>
-                              <mat-form-field class="example-full-width">
-                                <input matInput type="password" placeholder="Contraseña">
-                              </mat-form-field>
-                            </p>
-                            <table>
-                              <tr>
-                                <th>
-                                  <div class="example-button-row">
-                                    <button mat-raised-button color="warn">Borrar Datos</button>
-                                  </div>
-                                </th>
-                                <th>
-                                  <div class="example-button-row">
-                                    <button mat-raised-button color="primary">Registrarse</button>
-                                  </div>
-                                </th>
-                              </tr>
-                            </table>
-                          </form>
-                </div>
-            </div>
             <div id="InSe" class="modalDialog">
               <div>
                   <a href="#close" title="Close" class="close">X</a>

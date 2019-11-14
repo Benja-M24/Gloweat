@@ -22,7 +22,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import { ProductosComponent } from './productos/productos.component';
 import { ElaboracionComponent } from './elaboracion/elaboracion.component';
-import { AuthServhice } from './services/auth.service';
+import { AuthService } from './services/auth.service';
+import { RegistrarseComponent } from './login/registrarse/registrarse.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
+import { CompraService } from './services/compra.service';
 
 @NgModule({
   declarations: [
@@ -32,10 +36,11 @@ import { AuthServhice } from './services/auth.service';
     LoginComponent,
     ProductosComponent,
     ElaboracionComponent,
-
+    RegistrarseComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MatCardModule,
     BrowserAnimationsModule,
@@ -46,8 +51,10 @@ import { AuthServhice } from './services/auth.service';
     MatInputModule,
     MatButtonModule,
     MatTableModule,
+    MatDialogModule
   ],
-  providers: [AuthServhice],
-  bootstrap: [AppComponent]
+  providers: [AuthService, CompraService],
+  bootstrap: [AppComponent],
+  entryComponents: [RegistrarseComponent]
 })
 export class AppModule { }

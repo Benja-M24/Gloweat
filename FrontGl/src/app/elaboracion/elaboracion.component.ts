@@ -10,6 +10,7 @@ export class ElaboracionComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // Acá hay que hacer lo mismo que en productos.component.ts
   }
 
 }
