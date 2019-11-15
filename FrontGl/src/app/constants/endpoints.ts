@@ -1,1 +1,1 @@
- export const backendUrl = 'localhost:8000'
+ export const backendUrl = 'http://192.168.130.20:8000/'

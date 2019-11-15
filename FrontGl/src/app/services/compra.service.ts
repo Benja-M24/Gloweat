@@ -1,29 +1,33 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders} from '@angular/common/http';  
+import { backendUrl } from '../constants/endpoints';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class CompraService {
-  listaProductos = []
-  constructor() { }
+  httpHeaders = new HttpHeaders({'content-type': 'application/json'})
 
-  agregarProducto(producto) {
-    console.log(`Vamo a agregar ${producto.title}`)
-    this.listaProductos.push(producto);
-    // Falta guardar el producto en el backend
-    console.log(this.listaProductos);
+  constructor(private http: HttpClient) { }
+
+  // agregarProducto(producto) {
+  //   console.log(`Vamo a agregar ${producto.title}`)
+  //   this.listaProductos.push(producto);
+  //   // Falta guardar el producto en el backend
+  //   console.log(this.listaProductos);
+  // }
+
+  obtenerProductos(): Observable<any>{
+    const endpoint = "/prod/prod/"
+    return this.http.get(`${backendUrl}${endpoint}`, {headers:  this.httpHeaders})
   }
 
-  obtenerProductos() {
-    // Falta obtener lista de productos desde el backend
-    return this.listaProductos;
-  }
+  // actualizarEstadoProducto(id, nuevoEstado) {
 
-  actualizarEstadoProducto(id, nuevoEstado) {
+  // }
 
-  }
-
-  borrarProducto(id) {
-    
-  }
+  // borrarProducto(id) { 
+  // }
 }
