@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CompraService } from '../services/compra.service';
 
 @Component({
   selector: 'app-elaboracion',
@@ -6,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./elaboracion.component.css']
 })
 export class ElaboracionComponent implements OnInit {
-
-  constructor() { }
+  
+  listaProductos = [];
+  constructor(private compraService: CompraService) { }
 
   ngOnInit() {
-    // Acá hay que hacer lo mismo que en productos.component.ts
+    this.listaProductos = this.compraService.obtenerProductos()
+    console.log(this.listaProductos)
   }
 
 }

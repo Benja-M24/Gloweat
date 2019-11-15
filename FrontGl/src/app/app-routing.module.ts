@@ -6,8 +6,8 @@ import { ProductosComponent } from './productos/productos.component';
 import { ElaboracionComponent } from './elaboracion/elaboracion.component';
 
 const routes: Routes = [
-  { path: '',      component: SidenavComponent},
-  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
+  { path: 'index',      component: SidenavComponent},
   { path: 'productos', component: ProductosComponent },
   { path: 'elaboracion', component: ElaboracionComponent },
 ];

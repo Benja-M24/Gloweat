@@ -3,16 +3,16 @@
         <tr>
             <th>Nr Pedido</th>
             <th>Nombre</th>
-            <th>Fecha</th>
+            <th>Description</th>
             <th>Estado</th>
             <th>Enviar</th>
-            <th>Borrar</th>
+            
         </tr>
-        <tr>
-            <td>1</td>
-            <td>Combo 1</td>
+        <tr *ngFor="let item of listaProductos">
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
             <!-- <td><input type="date"></td> -->
-            <td>La fecha de hoy</td>
+            <td>{{item.description}}</td>
             <td>
                 <select name="Estado">
                     <option value="Sin_empezar">Sin empezar</option>
@@ -24,9 +24,6 @@
                 <mat-card-actions>
                         <button mat-button>Enviar</button>
                 </mat-card-actions>
-            </td>
-            <td>
-                <button><i class="fas fa-trash-alt"></i></button>
             </td>
         </tr>
 </table>
