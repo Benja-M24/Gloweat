@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.productos',
-    'rest_framework',
+    'rest_framework',   
     'corsheaders'
 ]
 REST_FRAMEWORK = {
@@ -87,7 +87,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'GLOWEAT.wsgi.application'
+# WSGI_APPLICATION = 'GLOWEAT.wsgi.application'
 
 
 # Database
