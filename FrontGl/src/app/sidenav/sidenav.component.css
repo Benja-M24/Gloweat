@@ -1,3 +1,13 @@
+.fas {
+  color: white;
+  font-size: 20px;
+}
+.example-perfil-image{
+    height: 200px;
+    width: 180px;
+    margin: auto;
+    margin-top: 40px;
+  }
 .example-container {
   display: flex;
   flex-direction: column;
@@ -9,7 +19,7 @@
   }
 
 button {
-    background: white;
+    background: gray;
     display: block;
     height: 100%;
 
@@ -28,4 +38,32 @@ h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 70px;
     text-align: center;
+}
+ul {
+  list-style-type: none;
+  width: 200px;
+  text-align: center;
+  padding: 0%;
+}
+li {
+  width: 200px;
+  height: 50px;
+  padding-top: 15px;
+  display: inline-block;
+}
+li:hover{
+  background-color: gray;
+  color: white;
+}
+
+.product-list {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  margin: 1rem;
 }

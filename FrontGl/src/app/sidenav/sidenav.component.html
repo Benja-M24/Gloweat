@@ -2,18 +2,34 @@
     class="example-container" (backdropClick)="close('backdrop')" *ngIf="shouldRun">
 
     <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+            <div class="example-perfil-image"><img mat-card-image src="https://lgfstatic.com/2015/conversions/virtudes-de-una-persona-large.jpg" alt="Perfil"></div>
+        <br>
+        <br>
+        <br>
     <ul>
-        <li><br></li>
-        <li><br></li>
-        <li><br></li>
-        <li>Nombre</li>
+        <li>Nombre <a routerLink="/login">login</a></li>
+        <li><a routerLink="/productos">Productos</a></li>
+        <li>Carrito</li>
+        <li> Historial de Carrito</li>
     </ul>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <h2><button mat-button (click)="sidenav.open()">Open</button></h2>
+    <h2><button mat-button (click)="sidenav.open()"><i class="fas fa-bars"></i></button></h2>
     <h1>Bienvenidos a Gloweat</h1>
-    <table>
+    <div class="product-list">
+      <div class="item" *ngFor="let item of productos">
+        <app-product-item
+          [id]="item.id"
+          [title]="item.title"
+          [description]="item.descripcion"
+          [image]="item.image"
+          [cost]="item.cost"
+        >
+        </app-product-item>
+      </div>
+    </div>
+    <!-- <table>
         <tr>
             <th><app-inicio></app-inicio></th>
             <th><app-inicio></app-inicio></th>
@@ -24,7 +40,7 @@
             <th><app-inicio></app-inicio></th>
             <th><app-inicio></app-inicio></th>
         </tr>
-    </table>
+    </table> -->
   </mat-sidenav-content>
 </mat-sidenav-container>
 
